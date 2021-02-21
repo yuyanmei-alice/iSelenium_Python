@@ -15,6 +15,7 @@ class ISelenium(unittest.TestCase):
     def get_config(self):
         config = configparser.ConfigParser()
         config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
+        print(f"路径：{os.environ['HOME']}")
         return config
 
     def tearDown(self):
